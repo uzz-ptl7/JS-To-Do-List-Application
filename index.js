@@ -37,7 +37,7 @@ function removeCategorizedTask(category, index){
                 }
                 tasks[i][1].length--;
                 console.log(`\n\n Task "${removedTask}" was removed from "${category}" tasks`);
-                console.log("To Do List after removing a Task \n");
+                console.log("To Do List after removing a Task");
                 return;
             } 
         }
