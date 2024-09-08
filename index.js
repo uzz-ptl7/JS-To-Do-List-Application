@@ -18,11 +18,10 @@ function addCategorizedTask(category, task){
     for (let i = 0; i < tasks.length; i++){
         if (tasks[i][0] === category){
             tasks[i][1].push(task);
-            console.log(`\nTask "${task}" added to "${category}" tasks`);
+            console.log(`\n\n Task "${task}" added to "${category}" tasks`);
             console.log("To DO List after adding a new task");
             return;
-        }
-    
+        }   
     }
     console.log(`Category "${category}" not found \n`);
 }
@@ -37,7 +36,7 @@ function removeCategorizedTask(category, index){
                     tasks[i][1][j] = tasks[i][1][j+1];
                 }
                 tasks[i][1].length--;
-                console.log(`\n Task "${removedTask}" was removed from "${category}" tasks`);
+                console.log(`\n\n Task "${removedTask}" was removed from "${category}" tasks`);
                 console.log("To Do List after removing a Task \n");
                 return;
             } 
@@ -51,7 +50,7 @@ function sortTasks(category){
     for (let i = 0; i < tasks.length; i++){
         if (tasks[i][0] === category){
             tasks[i][1].sort();
-            console.log(`\n "${category}" tasks have been sorted`)
+            console.log(`\n\n "${category}" tasks have been sorted`)
             console.log("To Do List after Sorting tasks")
             return;
         }
@@ -74,7 +73,7 @@ function searchTasks(category, task){
 }
 
 // Calling the Functions
-console.log("\nTo Do List before adding a new task");
+console.log("\n\n To Do List before adding a new task");
 displayCategorizedTasks();
 
 addCategorizedTask("Work", "Complete the presentation");
@@ -86,7 +85,7 @@ displayCategorizedTasks();
 sortTasks("Work");
 displayCategorizedTasks();
 
-console.log("\n Searched To Do List Result:")
+console.log("\n\n Searched To Do List Result:")
 searchTasks("Work", "Email the team");
 // displayCategorizedTasks();
 
